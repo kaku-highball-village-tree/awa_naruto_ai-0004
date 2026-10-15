@@ -249,6 +249,19 @@ img { max-width: 100%; height: auto; }
 .information-details dt, .information-details dd { margin: 0; padding: .65rem .75rem; }
 .information-details dt { background: rgb(232 232 248 / 90%); font-weight: 700; }
 .information-pending { font-weight: 700; }
+.information-tuition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  background: #f4f1f8;
+  color: #263d35;
+  text-align: center;
+}
+.information-tuition-total { font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.2; }
+.information-tuition-total small { margin-left: .15em; font-size: .5em; }
+.information-tuition-breakdown, .information-tuition-tax { font-size: clamp(1rem, 2.5vw, 1.2rem); }
 .information-subject-list { padding-left: 1.5rem; }
 .information-note { border-left: .25rem solid #b8b8d8; padding-left: .75rem; font-size: .9rem; }
 .information-contact { text-align: center; }
