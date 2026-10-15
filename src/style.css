@@ -1,0 +1,305 @@
+:root {
+  color-scheme: light;
+  --ink: #253c33;
+  --muted: #55675e;
+  --green: #285b43;
+  --line: #d9e3d9;
+  --paper: #fcfcf7;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; font-size: 16px; line-height: 1.9; overflow-wrap: anywhere; }
+a { color: var(--green); text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid #a54d16; outline-offset: 5px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.5; }
+h2 { font-size: clamp(1.4rem, 2.1vw, 1.9rem); margin-bottom: 24px; }
+h3 { font-size: 1.25rem; }
+p { margin-bottom: 18px; }
+p:last-child { margin-bottom: 0; }
+.skip-link { position: absolute; top: 10px; left: 16px; padding: 8px 16px; background: white; transform: translateY(-200%); z-index: 2; }
+.skip-link:focus { transform: translateY(0); }
+.site-header { background: #fff; border-bottom: 1px solid var(--line); }
+.header-inner { max-width: 1200px; margin: auto; padding: 26px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { font-size: 2rem; font-weight: 700; text-decoration: none; line-height: 1.5; }
+.brand span { display: block; font-size: 1rem; font-weight: 400; letter-spacing: .1em; color: var(--muted); }
+.header-note { font-size: .85rem; color: var(--muted); margin: 0; }
+.layout { max-width: 1200px; margin: 0 auto; padding: 40px 32px 64px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: start; }
+.site-nav { position: sticky; top: 24px; padding-top: 10px; }
+.nav-label { font-size: .8rem; color: var(--muted); letter-spacing: .12em; margin-bottom: 14px; }
+.site-nav ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.site-nav li { border-bottom: 1px solid var(--line); }
+.site-nav li a { display: block; padding: 12px 4px; font-size: .9rem; text-decoration: none; }
+.site-nav li a:hover { background: #eaf0e6; }
+.nav-contact { margin-top: 28px; padding: 18px 12px; background: #eaf0e6; border-radius: 8px; }
+.nav-contact p { font-size: .8rem; margin-bottom: 4px; }
+.nav-contact a { font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
+.nav-contact small { display: block; color: var(--muted); }
+.main-content { min-width: 0; }
+.hero { position: relative; isolation: isolate; overflow: hidden; background-color: #e9f0df; background-image: linear-gradient(rgb(233 240 223 / 88%), rgb(233 240 223 / 88%)), url("images/img_awa_naruto_ai_0001.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 48px 40px; border-radius: 12px; }
+.eyebrow { font-size: .75rem; letter-spacing: .14em; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+.badge { display: inline-block; padding: 3px 12px; border: 1px solid #b7c9a8; border-radius: 4px; font-size: .8rem; background: #f7faf2; margin: 14px 0; }
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: .04em; margin-bottom: 16px; }
+.hero-copy { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; line-height: 1.8; }
+.hero-notice { font-size: 1rem; font-weight: 400; margin: 22px 0 18px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 20px; background: var(--green); color: white; border: 1px solid var(--green); border-radius: 6px; text-decoration: none; font-size: .9rem; font-weight: 700; }
+.button:hover { background: #1b4230; }
+.button-light { color: var(--green); background: #fff; }
+.button-light:hover { background: #f0f5eb; }
+.section { padding-top: 56px; scroll-margin-top: 10px; }
+.beginner-section { padding: 28px; margin-top: 40px; background: #fff; border: 1px solid var(--line); border-left: 4px solid #719465; border-radius: 8px; }
+.beginner-section h2 { font-size: 1.3rem; margin-bottom: 16px; }
+.text-link { font-weight: 700; }
+.course { border: 1px solid #cedcc5; border-radius: 10px; padding: 30px; margin-top: 24px; background: #f0f6e9; }
+.general { border-color: #e1d4b3; background: #fcf4e1; }
+.course-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.course-heading h3 { font-size: 1.7rem; margin-bottom: 0; }
+.course-heading .eyebrow { margin-bottom: 4px; }
+.capacity { background: #fff9; border: 1px solid #c1cfb8; border-radius: 30px; padding: 4px 14px; font-size: .85rem; white-space: nowrap; }
+.general .capacity { border-color: #d9c8a0; }
+.course-details { margin: 24px 0 0; }
+.course-details > div { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid #253c3326; }
+dt { font-weight: 700; }
+dt small { font-weight: 400; font-size: .75rem; }
+dd { margin: 0; }
+.date-list { list-style: none; padding: 0; margin: 0; }
+.fee-row { align-items: center; }
+.price { display: block; font-size: 2rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.price span { font-size: 1rem; margin-left: 4px; }
+.fee-breakdown { display: block; font-size: .85rem; color: var(--muted); margin-top: 5px; }
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.info-card { border: 1px solid var(--line); padding: 24px; border-radius: 8px; background: white; }
+.info-card h3 { font-size: 1rem; color: var(--muted); }
+.teacher-card { border-top: 2px solid #749267; padding-top: 24px; }
+.teacher-card h3 { font-size: 1.6rem; margin-bottom: 6px; }
+.teacher-card h3 span { display: inline-block; font-size: .85rem; color: var(--muted); font-weight: 400; margin-left: 12px; }
+.teacher-role { color: var(--muted); }
+.education { padding-left: 1.4em; margin: 20px 0; }
+.contact-section { padding: 32px; margin-top: 56px; border-radius: 10px; border: 1px solid #cbd9c4; background: #eaf0e3; }
+.recruitment { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #c4d2be; }
+.contact-section h3 { font-size: 1rem; margin-bottom: 12px; }
+.contact-name { font-weight: 700; }
+.contact-phone { display: inline-block; font-size: clamp(1.5rem, 3.3vw, 2.3rem); font-weight: 700; line-height: 1.6; white-space: nowrap; }
+.phone-caption { color: var(--muted); font-size: .8rem; margin: 8px 0 20px; }
+address { font-style: normal; }
+.site-footer { border-top: 1px solid var(--line); padding: 28px 24px; text-align: center; background: #fff; }
+.site-footer p { margin-bottom: 4px; font-size: .85rem; }
+.site-footer p:first-child { font-weight: 700; }
+@media (max-width: 800px) {
+  .header-inner { padding: 20px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .layout { display: block; padding: 20px 20px 40px; }
+  .site-nav { position: static; padding: 0; margin-bottom: 24px; }
+  .site-nav ul { display: flex; flex-wrap: wrap; gap: 6px; border: 0; }
+  .site-nav li { border: 0; }
+  .site-nav li a { border: 1px solid var(--line); border-radius: 5px; background: white; padding: 7px 11px; font-size: .8rem; }
+  .nav-label { margin-bottom: 8px; }
+  .nav-contact { display: none; }
+  .hero { padding: 32px 24px; }
+  .section { padding-top: 40px; }
+  .beginner-section { padding: 24px; }
+  .course { padding: 24px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .contact-section { padding: 24px; margin-top: 40px; }
+}
+@media (max-width: 480px) {
+  .layout { padding-left: 16px; padding-right: 16px; }
+  .hero { padding: 28px 20px; }
+  .desktop-break { display: none; }
+  .hero-actions { flex-direction: column; }
+  .button { width: 100%; }
+  .course { padding: 22px 18px; }
+  .course-heading { gap: 8px; }
+  .course-heading h3 { font-size: 1.45rem; }
+  .capacity { font-size: .75rem; padding: 3px 10px; }
+  .course-details > div { grid-template-columns: 1fr; gap: 6px; }
+  dt br { display: none; }
+  dt small { margin-left: 8px; }
+  .beginner-section, .contact-section { padding: 24px 20px; }
+  .teacher-card h3 span { display: block; margin: 4px 0 0; }
+}
+
+.learning-page { padding-top: 0; }
+.learning-page h1 { font-size: clamp(1.4rem, 2.1vw, 1.9rem); letter-spacing: normal; margin-bottom: 24px; }
+.learning-page .hero-actions { margin-top: 28px; }
+
+.learning-site { min-height: 100vh; }
+.learning-site .learning-page h2 { margin-top: 48px; }
+.learning-site .learning-page h3 { margin-top: 32px; margin-bottom: 16px; }
+.learning-site .learning-page ul { padding-left: 1.5em; margin: 0 0 24px; }
+.learning-site .learning-page li + li { margin-top: 4px; }
+
+.learning-site .learning-page h4 { font-size: 1.1rem; line-height: 1.5; margin: 24px 0 16px; }
+
+.nav-contact .nav-phone { color: var(--green); font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
+.nav-contact .contact-options { font-size: .7rem; }
+.nav-contact .contact-options a { font-size: inherit; }
+.contact-phone { color: var(--green); }
+
+.contact-access { margin-top: 32px; }
+.contact-access .map-label { margin: 24px 0 12px; }
+.contact-access .contact-map { display: block; width: 100%; height: 400px; border: 0; }
+.contact-access .map-link { margin: 16px 0 0; }
+@media (max-width: 800px) {
+  .contact-access .contact-map { height: 300px; }
+}
+
+.learning-page .learning-hero { padding: 48px 40px; border-radius: 12px; background-color: #e9f0df; background-image: linear-gradient(rgb(233 240 223 / 88%), rgb(233 240 223 / 88%)), url("images/img_awa_naruto_ai_0002.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; }
+.learning-page .learning-hero h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.5; margin-bottom: 0; }
+.learning-page .learning-hero .learning-hero-description { margin-top: 24px; }
+.learning-page .learning-hero .learning-hero-examples { padding-left: 1.5em; margin: 0 0 24px; }
+.learning-page .learning-hero .learning-hero-examples > li + li { margin-top: 18px; }
+.learning-page .learning-hero .learning-hero-examples p { margin-top: 18px; }
+@media (max-width: 800px) {
+  .learning-page .learning-hero { padding: 32px 24px; }
+}
+@media (max-width: 480px) {
+  .learning-page .learning-hero { padding: 28px 20px; }
+  .learning-page .learning-hero h1 { font-size: 1.7rem; }
+}
+
+#courses .course-education { margin-top: 24px; }
+
+#courses .course.junior-high { background-color: #eef6f8; }
+
+#courses .course.high-school { background-color: #f4f0f8; }
+
+.site-footer .footer-home-link { color: inherit; text-decoration: none; }
+
+.site-footer .footer-st-link { display: inline-block; }
+
+.site-footer .footer-groups { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 480px) {
+  .site-footer .footer-groups { grid-template-columns: 1fr; }
+}
+
+.necessity-information-page { color: #000080; font-family: "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; line-height: 1.6; }
+.necessity-information-page h1 { letter-spacing: normal; }
+.necessity-information-page a { color: #0000cc; }
+.necessity-information-page a:visited { color: #800080; }
+.necessity-information-page a:active { color: #cc0000; }
+.necessity-information-page .table-scroll { max-width: 100%; overflow-x: auto; }
+.necessity-information-page { overflow-wrap: anywhere; }
+.necessity-information-page .necessity-information-hero h1 { margin-top: 0; font-size: clamp(1.65rem, 4vw, 2.4rem); line-height: 1.35; }
+.necessity-information-page .necessity-information-hero { border-bottom: 3px solid #000080; padding-bottom: 1rem; }
+.necessity-information-page .information-summary, .necessity-information-page .information-reason, .necessity-information-page .information-start-early, .necessity-information-page .information-conclusion, .necessity-information-page .information-sources { margin-top: 2rem; }
+.necessity-information-page .information-summary h2, .necessity-information-page .information-reason h2, .necessity-information-page .information-start-early h2, .necessity-information-page .information-conclusion h2, .necessity-information-page .information-sources h2 { font-size: clamp(1.25rem, 3vw, 1.65rem); line-height: 1.4; }
+.necessity-information-page .information-stat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.necessity-information-page .information-stat-card { display: flex; min-height: 8rem; flex-direction: column; justify-content: center; border: 1px solid #9aa9cc; border-radius: .5rem; background: #eef4ff; padding: 1rem; text-align: center; }
+.necessity-information-page .information-stat-label { font-weight: 700; }
+.necessity-information-page .information-stat-value { display: block; margin-top: .35rem; color: #8b005f; font-size: clamp(1.55rem, 4vw, 2.25rem); line-height: 1.25; }
+.necessity-information-page .information-related-link { margin: 1.5rem 0; text-align: right; }
+.necessity-information-page .information-related-link a { font-weight: 700; }
+.necessity-information-page .information-reason, .necessity-information-page .information-start-early { border-left: .35rem solid #687fb8; padding-left: 1rem; }
+.necessity-information-page .information-highlight { border-radius: .35rem; background: #fff3c4; padding: .75rem 1rem; font-size: 1.1rem; text-align: center; }
+.necessity-information-page .information-keywords { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: .75rem; padding: 0; list-style: none; }
+.necessity-information-page .information-keywords li { border: 1px solid #687fb8; border-radius: 999px; background: #f4f7ff; padding: .25rem .75rem; font-weight: 700; }
+.necessity-information-page .information-learning-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin-block: 1rem; padding: 0; list-style: none; counter-reset: information-step; }
+.necessity-information-page .information-learning-flow-short { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.necessity-information-page .information-learning-flow li { position: relative; display: grid; min-height: 5rem; place-items: center; border: 1px solid #687fb8; border-radius: .5rem; background: #f4f7ff; padding: .75rem; text-align: center; counter-increment: information-step; }
+.necessity-information-page .information-learning-flow li::before { position: absolute; top: .2rem; left: .45rem; content: counter(information-step); color: #52689e; font-size: .8rem; font-weight: 700; }
+.necessity-information-page .information-learning-flow li:not(:last-child)::after { position: absolute; right: -1.15rem; content: "→"; color: #52689e; font-weight: 700; }
+.necessity-information-page .information-score-comparison { width: min(100%, 28rem); border-collapse: collapse; }
+.necessity-information-page .information-score-comparison caption { margin-bottom: .4rem; font-weight: 700; text-align: left; }
+.necessity-information-page .information-score-comparison th, .necessity-information-page .information-score-comparison td { border: 1px solid #687fb8; padding: .6rem 1rem; text-align: center; }
+.necessity-information-page .information-score-comparison thead th { background: #dfe9ff; }
+.necessity-information-page .information-conclusion { border: 2px solid #52689e; border-radius: .5rem; background: #eef4ff; padding: 1rem 1.25rem; }
+.necessity-information-page .information-conclusion h2 { margin-top: 0; }
+.necessity-information-page .information-sources { border-top: 1px solid #9aa9cc; padding-top: 1rem; font-size: .95rem; }
+.necessity-information-page .information-sources li + li { margin-top: .75rem; }
+.necessity-information-page .information-page-actions { display: flex; flex-wrap: wrap; gap: .75rem 1rem; margin-top: 1.5rem; }
+@media (max-width: 900px) {
+  .necessity-information-page .information-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .necessity-information-page .information-learning-flow, .necessity-information-page .information-learning-flow-short { grid-template-columns: 1fr; gap: 1.5rem; }
+  .necessity-information-page .information-learning-flow li:not(:last-child)::after { right: auto; bottom: -1.35rem; content: "↓"; }
+}
+@media (max-width: 480px) {
+  .necessity-information-page .information-stat-grid { grid-template-columns: 1fr; }
+  .necessity-information-page .information-related-link { text-align: left; }
+  .necessity-information-page .information-reason, .necessity-information-page .information-start-early { padding-left: .75rem; }
+}
+
+.information-recruitment-page { overflow-wrap: anywhere; }
+.information-recruitment-page .information-recruitment-title { margin-top: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+.information-recruitment-page .information-course-section, .information-recruitment-page .information-location { margin-block: 1.75rem; }
+.information-recruitment-page .information-course-section h2, .information-recruitment-page .information-location h2 { border-bottom: 2px solid #6b5cad; padding-bottom: .25rem; font-size: clamp(1.25rem, 2.5vw, 1.6rem); }
+.information-recruitment-page .information-course-subtitle { color: #bc4d00; font-size: 1.17rem; }
+.information-recruitment-page .information-schedule { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+.information-recruitment-page .information-key-message { border-left: .3rem solid #6b5cad; background: rgb(245 242 255 / 80%); padding: .5rem 1rem; }
+.information-recruitment-page .information-key-message p:first-child { margin-top: .5rem; }
+.information-recruitment-page .information-key-message p:last-child { margin-bottom: .5rem; }
+.information-recruitment-page .information-details { margin: 0; border: 1px solid #b8b8d8; }
+.information-recruitment-page .information-details div { display: grid; grid-template-columns: minmax(8rem, 25%) 1fr; }
+.information-recruitment-page .information-details div + div { border-top: 1px solid #b8b8d8; }
+.information-recruitment-page .information-details dt, .information-recruitment-page .information-details dd { margin: 0; padding: .65rem .75rem; }
+.information-recruitment-page .information-details dt { background: rgb(232 232 248 / 90%); font-weight: 700; }
+.information-recruitment-page .information-pending { font-weight: 700; }
+.information-recruitment-page .information-subject-list { padding-left: 1.5rem; }
+.information-recruitment-page .information-note { border-left: .25rem solid #b8b8d8; padding-left: .75rem; font-size: .9rem; }
+@media (max-width: 480px) {
+  .information-recruitment-page .information-details div { grid-template-columns: 1fr; }
+  .information-recruitment-page .information-details dd { padding-top: .35rem; }
+}
+
+.name-image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* 高3共通テスト直前対策コース専用 */
+#courses .course.exam-prep-course { background-color: #fff1e8; border-color: #ead4c4; }
+#courses .course.high-school-foundation { background-color: #f9eef2; border-color: #e8cfd7; }
+
+/* index.html トップヒーローの背景画像を見やすく表示 */
+#home.hero { background-image: linear-gradient(rgb(233 240 223 / 70%), rgb(233 240 223 / 70%)), url("images/img_awa_naruto_ai_0001.png"); }
+
+/* 情報Ⅰ生徒募集ページ専用の背景画像 */
+.main-content.information-recruitment-page { background-image: linear-gradient(rgb(252 252 247 / 68%), rgb(252 252 247 / 68%)), url("images/img_awa_naruto_ai_0008.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 5mm; }
+
+
+/* 情報Ⅰ学習理由ページの背景画像と本文余白 */
+.main-content.necessity-information-page { background-image: url("images/img_awa_naruto_ai_0006.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 5mm; }
+
+
+/* 募集コース一覧 */
+.course-list-box { margin: 24px 0; background-image: url("images/img_awa_naruto_ai_0002.png"); background-size: cover; background-position: center; background-repeat: no-repeat; }
+.course-list-box ul { margin: 0; padding-left: 1.5em; }
+.course-list-box li + li { margin-top: 4px; }
+
+
+/* 教室紹介ページの要約枠より下に背景画像を表示 */
+.learning-page .learning-content { background-image: url("images/img_awa_naruto_ai_0005.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 5mm; }
+
+
+/* オーダーメイドコース専用の背景画像 */
+.custom-courses-page .beginner-section {
+  background-image: url("images/img_awa_naruto_ai_0003.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.custom-courses-page .custom-courses-content {
+  display: flow-root;
+  background-image: url("images/img_awa_naruto_ai_0004.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.custom-courses-page .custom-courses-content .course,
+.custom-courses-page .custom-courses-content .contact-section {
+  background-color: transparent;
+}
+
+
+/* トップページ後半の本文専用背景 */
+.main-content > section[aria-labelledby="naruto-ai-title"] {
+  background-image: url("images/img_awa_naruto_ai_0006.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 5mm;
+}
