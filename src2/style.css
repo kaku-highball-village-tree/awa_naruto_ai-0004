@@ -45,6 +45,18 @@ img { max-width: 100%; height: auto; }
 @media (min-width: 1040px) {
   .ad-scroll { overflow: hidden; text-align: center; }
 }
+.visitor-counter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem .5rem;
+  margin-block: 1.5rem;
+  color: #000080;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  text-align: center;
+}
+.visitor-counter img { display: block; }
 .feedback { margin-top: 1.5rem; text-align: center; }
 .feedback span { color: #f00; }
 .site-footer { padding: 1rem 0 2rem; text-align: center; }
