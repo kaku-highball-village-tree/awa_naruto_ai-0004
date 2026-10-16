@@ -259,7 +259,7 @@ img { max-width: 100%; height: auto; }
   text-align: center;
 }
 .information-schedule-consultation strong { font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.2; }
-.information-schedule-consultation span { font-size: clamp(1rem, 2.5vw, 1.2rem); }
+.information-schedule-consultation span { align-self: stretch; font-size: clamp(1rem, 2.5vw, 1.2rem); text-align: left; }
 .information-tuition {
   display: flex;
   flex-direction: column;
