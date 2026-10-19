@@ -258,6 +258,8 @@ address { font-style: normal; }
 
 /* î•ñ‡T¶“k•åWƒy[ƒWê—p‚Ì”wŒi‰æ‘œ */
 .main-content.information-recruitment-page { background-image: linear-gradient(rgb(252 252 247 / 68%), rgb(252 252 247 / 68%)), url("images/img_awa_naruto_ai_0008.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 5mm; }
+.main-content.beginner-page { background-image: linear-gradient(rgb(252 252 247 / 70%), rgb(252 252 247 / 70%)), url("images/img_awa_naruto_ai_0008.png"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll; padding: 5mm; }
+.main-content.beginner-page .beginner-section { background-color: rgb(255 255 255 / 88%); }
 
 
 /* î•ñ‡TŠwK——Rƒy[ƒW‚Ì”wŒi‰æ‘œ‚Æ–{•¶—]”’ */
